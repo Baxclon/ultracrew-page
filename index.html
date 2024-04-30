@@ -6,11 +6,30 @@
          body {
            font-family: Arial, sans-serif;
            background-color: #cae6e2;
+           margin: 0; /* Agregado para eliminar el espacio por defecto alrededor del cuerpo */
+           padding: 0; /* Agregado para eliminar el relleno por defecto alrededor del cuerpo */
          }
          h1 {
            color: #333;
          }
-       </style>
+         /* Estilo para el botón */
+         .boton {
+             display: inline-block;
+             padding: 10px 20px;
+             background-color: #007bff;
+             color: #fff;
+             text-decoration: none;
+             border-radius: 5px;
+             border: none;
+             cursor: pointer;
+             margin-right: 10px; /* Agregado para separar los botones */
+         }
+        
+         /* Estilo para cuando el cursor está sobre el botón */
+         .boton:hover {
+             background-color: #0056b3;
+         }
+      </style>
    </head>
    <body>
       <header>
@@ -19,6 +38,12 @@
       <main>
          <h2>Esto aun sigue en construccion pero meh</h2>
          <p>Si quieres unirte al discord, usa el link de abajo!</p>
+         <div>
+            <a href="redes.html" class="boton">Redes</a>
+            <a href="https://discord.gg/b2Br6PmvQw" class="boton" target="_blank">Servidor de Discord</a>
+            <a href="factos.html" class="boton">Factos generados</a>
+         </div>
+
          <iframe src="https://discord.com/widget?id=1218387084633702521&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </main>
       <footer>
