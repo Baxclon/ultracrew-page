@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>UltraCrew - Aun en progreso</title>
+      <title>UltraCrew.site - Inicio</title>
+      <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
       <head>
          <meta property="og:title" content="Ultracrew.page">
          <meta property="og:description" content="Sitio web oficial del UltraCrew!">
@@ -9,7 +10,7 @@
          <meta property="og:url" content="https://rainbow-pie-8ef7f1.netlify.app/">
          <meta property="og:type" content="website">
      </head>
-     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <style>
          body {
            font-family: Arial, sans-serif;
@@ -40,6 +41,8 @@
       </style>
    </head>
    <body>
+      <div id="topbar"></div>
+      <!--#include virtual="topbar.html" -->
       <header>
          <h1>Bienvenido a la pagina oficial del UltraCrew!</h1>
       </header>
@@ -50,12 +53,26 @@
             <a href="redes.html" class="boton">Redes</a>
             <a href="https://discord.gg/b2Br6PmvQw" class="boton" target="_blank">Servidor de Discord</a>
             <a href="factos.html" class="boton">Factos generados</a>
+            <a href="promocodes.html" class="boton">Codigos</a>
          </div>
 
          <iframe src="https://discord.com/widget?id=1218387084633702521&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </main>
       <footer>
       </footer>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             var xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     document.getElementById("topbar").innerHTML = this.responseText;
+                 }
+             };
+             xhttp.open("GET", "topbar.html", true);
+             xhttp.send();
+         });
+         </script>
+         
    </body>
 </html>
 
