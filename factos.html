@@ -60,6 +60,16 @@
             return textosAleatorios[indice];
         }
 
+        // Función para generar texto aleatorio y refrescar la página
+        function generarTextoAleatorio() {
+            // Generar texto aleatorio
+            var texto = textoAleatorio();
+            // Mostrar el texto
+            document.getElementById("textoAleatorio").textContent = texto;
+            // Refrescar la página
+            window.location.reload();
+        }
+
         // Mostrar texto aleatorio al cargar la página
         window.onload = function() {
             var texto = textoAleatorio();
@@ -68,3 +78,4 @@
     </script>
 </body>
 </html>
+
