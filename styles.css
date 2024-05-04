@@ -1,0 +1,73 @@
+/* Estilos para el cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Estilos para la topbar */
+.topbar {
+  background-color: #333; /* Color de fondo */
+  padding: 10px 0; /* Espaciado interno (arriba y abajo) */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+/* Estilos para los enlaces de la topbar */
+.topbar-link {
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  margin: 0 10px; /* Espaciado entre enlaces */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilos para los enlaces de la topbar cuando se pasa el ratón sobre ellos */
+.topbar-link:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos para el contenedor */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título */
+h1 {
+  text-align: center;
+}
+
+/* Estilos para el campo de texto */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para el botón al pasar el ratón sobre él */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el párrafo */
+p {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}

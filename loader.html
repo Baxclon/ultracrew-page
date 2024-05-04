@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultracrew.site | Cargando...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3; /* Azul característico de Windows */
+      margin: 0;
+      padding: 0;
+      color: black; /* Texto en blanco */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3; /* Gris claro */
+      border-top: 8px solid #3498db; /* Azul claro */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite; /* Animación de rotación */
+      margin-bottom: 20px; /* Espacio entre el indicador de carga y el texto */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      font-size: 1.2em; /* Tamaño del texto */
+    }
+  </style>
+</head>
+<body>
+  <!-- Indicador de carga -->
+  <div class="loader"></div>
+
+  <!-- Texto de carga -->
+  <div class="loading-text">Cargando...</div>
+
+  <script>
+    // Ocultar la pantalla de carga después de 3 segundos
+    setTimeout(function() {
+      document.body.style.display = 'none';
+    }, 3000);
+  </script>
+</body>
+</html>

@@ -1,43 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página en Mantenimiento</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #007bff; /* Color de fondo azul */
-            color: black; /* Texto en blanco */
-            text-align: center;
-            height: 100vh; /* Altura de la ventana */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+<html>
+   <head>
+      <title>UltraCrew.site - Inicio</title>
+      
+      <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+      <head>
+         <meta property="og:title" content="Ultracrew.page">
+         <meta property="og:description" content="Sitio web oficial del UltraCrew!">
+         <meta property="og:image" content="https://cdn.discordapp.com/attachments/1218396463768277142/1225243945961787413/13_sin_titulo_20240403194142.png?ex=66206c58&is=660df758&hm=64243f5e6eee712cb60b09ad774da7ea0f45866a107b37743c519d39bada7d81&">
+         <meta property="og:url" content="https://ultracrew.netlify.app/">
+         <meta property="og:type" content="website">
+     </head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <!-- Vincula el archivo CSS aquí -->
+    <link rel="stylesheet" href="styles.css">
 
-        .container {
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff; /* Fondo blanco */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        }
+      <style>
+         body {
+           font-family: Arial, sans-serif;
+           background-color: #cae6e2;
+           margin: 0; /* Agregado para eliminar el espacio por defecto alrededor del cuerpo */
+           padding: 0; /* Agregado para eliminar el relleno por defecto alrededor del cuerpo */
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+         }
+         h1 {
+           color: #333;
+         }
+         /* Estilo para el botón */
+         .boton {
+             display: inline-block;
+             padding: 10px 20px;
+             background-color: #007bff;
+             color: #fff;
+             text-decoration: none;
+             border-radius: 5px;
+             border: none;
+             cursor: pointer;
+             margin-right: 10px; /* Agregado para separar los botones */
+         }
+        
+         /* Estilo para cuando el cursor está sobre el botón */
+         .boton:hover {
+             background-color: #0056b3;
+         }
+      </style>
+   </head>
+   <body>
+       <!-- Incluir la pantalla de carga -->
+  <iframe src="loader.html" frameborder="0" style="position:fixed;top:0;left:0;width:100%;height:100%;border:none;pointer-events:none;"></iframe>
+      <div id="topbar"></div>
+      <!--#include virtual="topbar.html" -->
+      <header>
+         <h1>Bienvenido a la pagina oficial del UltraCrew!</h1>
+      </header>
+      <main>
+         <h2>Esto aun sigue en construccion pero meh</h2>
+         <p>Si quieres unirte al discord, usa el link de abajo!</p>
+         <div>
+            <a href="redes.html" class="boton">Redes</a>
+            <a href="discord.html" class="boton" target="_blank">Servidor de Discord</a>
+            <a href="factos.html" class="boton">Factos generados</a>
+            <a href="promocodes.html" class="boton">Codigos</a>
+         </div>
 
-        h1 {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Página en Mantenimiento</h1>
-        <p>Lamentamos las molestias, pero estamos realizando tareas de mantenimiento en este momento.</p>
-        <p>Vuelve pronto.</p>
-    </div>
-</body>
+         <iframe src="https://discord.com/widget?id=1218387084633702521&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </main>
+      <footer>
+      </footer>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             var xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     document.getElementById("topbar").innerHTML = this.responseText;
+                 }
+             };
+             xhttp.open("GET", "topbar.html", true);
+             xhttp.send();
+         });
+         </script>
+         
+   </body>
 </html>
-
